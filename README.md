@@ -6,7 +6,7 @@
 <b>Infomation: </b>
 - AAPanel homepage: https://www.aapanel.com
 - Docker source: https://hub.docker.com/r/aapanel/aapanel
-- Default installation entry:aapanel => exp: http://localhost:9999/aapanel
+- Default installation entry:aapanel => exp: http://localhost:21780/aapanel
 - Default username: aapanel
 - Default password: aapanel123
 

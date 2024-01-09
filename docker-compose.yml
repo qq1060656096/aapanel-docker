@@ -14,3 +14,5 @@ services:
     volumes: 
       - ${WEBSITE_DATA}:/www/wwwroot
       - ${WEBSITE_LOG}:/www/wwwlogs
+      - ${VHOST_DIR}:/www/server/panel/vhost
+      - ${AAPANEL_DIR}/dev/shm/nginx-cache/wp:/dev/shm/nginx-cache/wp
