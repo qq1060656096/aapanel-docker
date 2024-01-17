@@ -13,7 +13,11 @@ services:
       - "${PHPMYADMIN_PORT}:888"
       - "${REDIS_PORT}:6379"
     volumes:
-      - ./nginx/nshop.localhost.conf:/www/server/panel/vhost/nginx/nshop.localhost.conf
+      - ./nginx/pc.localhost.conf:/www/server/panel/vhost/nginx/pc.localhost.conf
+      - ./nginx/api.localhost.conf:/www/server/panel/vhost/nginx/api.localhost.conf
+      - ./nginx/innerapi.localhost.conf:/www/server/panel/vhost/nginx/innerapi.localhost.conf
+      - ./nginx/platform.localhost.conf:/www/server/panel/vhost/nginx/platform.localhost.conf
+      - ./nginx/erp.localhost.conf:/www/server/panel/vhost/nginx/erp.localhost.conf
       - ${WEBSITE_DATA}:/www/wwwroot
       - ${WEBSITE_LOG}:/www/wwwlogs
       - ${AAPANEL_DIR}/dev/shm/nginx-cache/wp:/dev/shm/nginx-cache/wp
