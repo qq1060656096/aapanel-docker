@@ -13,7 +13,7 @@ services:
       - "${PHPMYADMIN_PORT}:888"
       - "${REDIS_PORT}:6379"
     volumes:
-      - ./nginx/nshop.localhost.conf:/www/server/panel/vhost/nginx/nshop.localhost.conf
+      - ./nginx/rewrite.localhost.conf:/www/server/panel/vhost/nginx/rewrite.localhost.conf
       - ${WEBSITE_DATA}:/www/wwwroot
       - ${WEBSITE_LOG}:/www/wwwlogs
       - ${AAPANEL_DIR}/dev/shm/nginx-cache/wp:/dev/shm/nginx-cache/wp
