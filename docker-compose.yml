@@ -5,13 +5,15 @@ services:
     build: 
       context: ./bin/aapanel
     container_name: "aapanel-webserver"
+    privileged: true
     ports:
       - "${AAPANEL_PORT}:7800"
       - "${WEBSERVER_HOST_PORT}:80"
       - "${WEBSERVER_SECURE_HOST_PORT}:443"
       - "${PHPMYADMIN_PORT}:888"
       - "${REDIS_PORT}:6379"
-    volumes: 
+    volumes:
+      - ./nginx/nshop.localhost.conf:/www/server/panel/vhost/nginx/nshop.localhost.conf
       - ${WEBSITE_DATA}:/www/wwwroot
       - ${WEBSITE_LOG}:/www/wwwlogs
       - ${AAPANEL_DIR}/dev/shm/nginx-cache/wp:/dev/shm/nginx-cache/wp
